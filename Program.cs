@@ -6,11 +6,11 @@ public class Calculator
         double result = 0;
         double firstNumber = 0;
         double secondNumber = 0;
-        string caseArifmeticOperations = "";
+        string switchcasesArifmeticOperations = "";
         bool check = true;
         string question;
         double newNumber = 0;
-        string secondCaseArifmeticOperations = "";
+        string secondSwitchCasesArifmeticOperations = "";
         double newResult;
 
         try
@@ -19,7 +19,7 @@ public class Calculator
             firstNumber = Convert.ToInt32(Console.ReadLine());
 
             Console.WriteLine("Введите знак:");
-            caseArifmeticOperations = Console.ReadLine();
+            switchcasesArifmeticOperations = Console.ReadLine();
 
             Console.WriteLine("Введите второе число");
             secondNumber = Convert.ToInt32(Console.ReadLine());
@@ -29,7 +29,7 @@ public class Calculator
             Console.WriteLine("ошибка");
             Console.ReadLine();
         }
-        switch (caseArifmeticOperations)
+        switch (switchcasesArifmeticOperations)
         {
             case "/":
                 if (secondNumber != 0)
@@ -67,7 +67,7 @@ public class Calculator
                 try
                 {
                     Console.WriteLine("Введите знак");
-                    secondCaseArifmeticOperations = Console.ReadLine();
+                    secondSwitchCasesArifmeticOperations = Console.ReadLine();
 
                     Console.WriteLine("Введите  новое число");
                     newNumber = Convert.ToInt32(Console.ReadLine());
@@ -77,7 +77,7 @@ public class Calculator
                     Console.WriteLine("ошибка");
                 }
 
-                switch (secondCaseArifmeticOperations)
+                switch (secondSwitchCasesArifmeticOperations)
                 {
                     case "/":
                         if (secondNumber != 0)
