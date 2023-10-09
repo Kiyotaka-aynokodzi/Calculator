@@ -1,0 +1,14 @@
+C:\Users\Zet\OneDrive\Рабочий стол\Новая папка (9)\obj\Debug\net7.0\Новая папка (9).GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Zet\OneDrive\Рабочий стол\Новая папка (9)\obj\Debug\net7.0\Новая папка (9).AssemblyInfoInputs.cache
+C:\Users\Zet\OneDrive\Рабочий стол\Новая папка (9)\obj\Debug\net7.0\Новая папка (9).AssemblyInfo.cs
+C:\Users\Zet\OneDrive\Рабочий стол\Новая папка (9)\obj\Debug\net7.0\Новая папка (9).csproj.CoreCompileInputs.cache
+C:\Users\Zet\OneDrive\Рабочий стол\Новая папка (9)\bin\Debug\net7.0\Новая папка (9).exe
+C:\Users\Zet\OneDrive\Рабочий стол\Новая папка (9)\bin\Debug\net7.0\Новая папка (9).deps.json
+C:\Users\Zet\OneDrive\Рабочий стол\Новая папка (9)\bin\Debug\net7.0\Новая папка (9).runtimeconfig.json
+C:\Users\Zet\OneDrive\Рабочий стол\Новая папка (9)\bin\Debug\net7.0\Новая папка (9).dll
+C:\Users\Zet\OneDrive\Рабочий стол\Новая папка (9)\bin\Debug\net7.0\Новая папка (9).pdb
+C:\Users\Zet\OneDrive\Рабочий стол\Новая папка (9)\obj\Debug\net7.0\Новая папка (9).dll
+C:\Users\Zet\OneDrive\Рабочий стол\Новая папка (9)\obj\Debug\net7.0\refint\Новая папка (9).dll
+C:\Users\Zet\OneDrive\Рабочий стол\Новая папка (9)\obj\Debug\net7.0\Новая папка (9).pdb
+C:\Users\Zet\OneDrive\Рабочий стол\Новая папка (9)\obj\Debug\net7.0\Новая папка (9).genruntimeconfig.cache
+C:\Users\Zet\OneDrive\Рабочий стол\Новая папка (9)\obj\Debug\net7.0\ref\Новая папка (9).dll
