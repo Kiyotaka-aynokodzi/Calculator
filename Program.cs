@@ -24,6 +24,7 @@ public class Calculator
             Console.WriteLine("Введите второе число");
             secondNumber = Convert.ToInt32(Console.ReadLine());
         }
+
         catch (Exception)
         {
             Console.WriteLine("ошибка");
@@ -63,7 +64,7 @@ public class Calculator
         {
             Console.Write("Продолжить?");
             question = Console.ReadLine();
-            if (question == "Да" || question == "да" || question == "Yes" || question == "yes")
+            if (question == "Yes" || question == "yes") 
             {
 
                 try //снова проверка на ввод числа
@@ -108,11 +109,13 @@ public class Calculator
                 check = true;
 
             }
-            else if (question == "Нет" || question == "нет" || question == "No" || question == "no")
+
+            else if (question == "No" || question == "no")
             {
                 Console.ReadLine();
                 check = false;
             }
+
             else
             {
                 Console.WriteLine("Ошибка");
@@ -121,5 +124,4 @@ public class Calculator
             }
         }
     }
-}
 }
