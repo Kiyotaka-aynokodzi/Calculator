@@ -16,13 +16,13 @@ public class Calculator
         try//делаю проверку на ошибки при вводе данных
         {
             Console.WriteLine("Введите число");
-            firstNumber = Convert.ToInt32(Console.ReadLine());
+            firstNumber = Convert.ToInt64(Console.ReadLine());
 
             Console.WriteLine("Введите знак:");
             switchCasesArifmeticOperations = Console.ReadLine();
 
             Console.WriteLine("Введите второе число");
-            secondNumber = Convert.ToInt32(Console.ReadLine());
+            secondNumber = Convert.ToInt64(Console.ReadLine());
         }
 
         catch (Exception)
@@ -73,7 +73,7 @@ public class Calculator
                     secondSwitchCasesArifmeticOperations = Console.ReadLine();
 
                     Console.WriteLine("Введите  новое число");
-                    newNumber = Convert.ToInt32(Console.ReadLine());
+                    newNumber = Convert.ToInt64(Console.ReadLine());
                 }
                 catch (Exception)
                 {
@@ -112,6 +112,7 @@ public class Calculator
 
             else if (question == "No" || question == "no")
             {
+            Console.WriteLine("Покеда");
                 Console.ReadLine();
                 check = false;
             }
