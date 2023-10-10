@@ -1,4 +1,4 @@
-﻿// See https://aka.ms/new-console-template for more information
+// See https://aka.ms/new-console-template for more information
 public class Calculator
 {
     public static void Main()
@@ -6,20 +6,20 @@ public class Calculator
         double result = 0;
         double firstNumber = 0;
         double secondNumber = 0;
-        string switchcasesArifmeticOperations = "";
-        bool check = true;
-        string question;
-        double newNumber = 0;
-        string secondSwitchCasesArifmeticOperations = "";
         double newResult;
+        double newNumber = 0;
+        string switchCasesArifmeticOperations = "";
+        string question;
+        string secondSwitchCasesArifmeticOperations = "";
+        bool check = true;
 
-        try
+        try//делаю проверку на ошибки при вводе данных
         {
             Console.WriteLine("Введите число");
             firstNumber = Convert.ToInt32(Console.ReadLine());
 
             Console.WriteLine("Введите знак:");
-            switchcasesArifmeticOperations = Console.ReadLine();
+            switchCasesArifmeticOperations = Console.ReadLine();
 
             Console.WriteLine("Введите второе число");
             secondNumber = Convert.ToInt32(Console.ReadLine());
@@ -29,7 +29,8 @@ public class Calculator
             Console.WriteLine("ошибка");
             Console.ReadLine();
         }
-        switch (switchcasesArifmeticOperations)
+
+        switch (switchCasesArifmeticOperations)//далее создаю кейсы арифметическими операциями
         {
             case "/":
                 if (secondNumber != 0)
@@ -57,14 +58,15 @@ public class Calculator
         }
         newResult = result;
         Console.WriteLine(result);
-        while (check == true)
+
+        while (check == true)//создал цикл для возможности продолжать или нет работу над нашим результатом
         {
             Console.Write("Продолжить?");
             question = Console.ReadLine();
             if (question == "Да" || question == "да" || question == "Yes" || question == "yes")
             {
 
-                try
+                try //снова проверка на ввод числа
                 {
                     Console.WriteLine("Введите знак");
                     secondSwitchCasesArifmeticOperations = Console.ReadLine();
@@ -77,7 +79,7 @@ public class Calculator
                     Console.WriteLine("ошибка");
                 }
 
-                switch (secondSwitchCasesArifmeticOperations)
+                switch (secondSwitchCasesArifmeticOperations)//снова кейсы для арифметических операций с нашим прошлым result, для вычисления newResult
                 {
                     case "/":
                         if (secondNumber != 0)
@@ -119,4 +121,5 @@ public class Calculator
             }
         }
     }
+}
 }
