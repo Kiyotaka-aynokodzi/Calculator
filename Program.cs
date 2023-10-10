@@ -30,7 +30,7 @@ public class Calculator
             Console.ReadLine();
         }
 
-        switch (switchCasesArifmeticOperations)//далее создаю кейсы арифметическими операциями
+        switch (switchCasesArifmeticOperations)//далее создаю кейсы с арифметическими операциями
         {
             case "/":
                 if (secondNumber != 0)
