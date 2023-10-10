@@ -13,7 +13,6 @@ public class Calculator
         string secondSwitchCasesArifmeticOperations = "";
         bool check = true;
         decimal quantityOperations = 1;
-        string quantityOperationsFocus = "не скажу";
 
         try//делаю проверку на ошибки при вводе данных
         {
