@@ -12,6 +12,7 @@ public class Calculator
         string question;
         string secondSwitchCasesArifmeticOperations = "";
         bool check = true;
+        decimal quantityOperations = 1;
 
         try//делаю проверку на ошибки при вводе данных
         {
@@ -62,6 +63,7 @@ public class Calculator
 
         while (check == true)//создал цикл для возможности продолжать или нет работу над нашим результатом
         {
+            quantityOperations++;
             Console.Write("Продолжить?");
             question = Console.ReadLine();
             if (question == "Yes" || question == "yes") 
@@ -115,6 +117,7 @@ public class Calculator
             Console.WriteLine("Покеда");
                 Console.ReadLine();
                 check = false;
+                quantityOperations = 1;
             }
 
             else
@@ -122,7 +125,9 @@ public class Calculator
                 Console.WriteLine("Ошибка");
                 check = false;
                 Console.ReadLine();
+                quantityOperations = 1;
             }
         }
+        Console.WriteLine("Количество выполненных операций: " + quantityOperations);
     }
 }
