@@ -82,7 +82,7 @@ public class Calculator
                 switch (secondSwitchCasesArifmeticOperations)//снова кейсы для арифметических операций с нашим прошлым result, для вычисления newResult
                 {
                     case "/":
-                        if (secondNumber != 0)
+                        if (newNumber != 0)
                         {
                             newResult = newResult / newNumber;
                         }
