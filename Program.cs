@@ -106,7 +106,7 @@ public class Program
     static void Main()
     {
         Calculator cal = new Calculator();
-        Requester simp = new Requester(cal);
-        simp.Request();
+        Requester Request = new Requester(cal);
+        Request.Request();
     }
 }
