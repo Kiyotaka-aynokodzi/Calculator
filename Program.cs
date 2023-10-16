@@ -1,133 +1,112 @@
 // See https://aka.ms/new-console-template for more information
+using System.Security.AccessControl;
+
 public class Calculator
 {
-    public static void Main()
+    public double Sum(double number, double moreNumber)
     {
-        double result = 0;
-        double firstNumber = 0;
-        double secondNumber = 0;
-        double newResult;
-        double newNumber = 0;
-        string switchCasesArifmeticOperations = "";
-        string question;
-        string secondSwitchCasesArifmeticOperations = "";
+        return number + moreNumber;
+    }
+
+    public double Multiply(double number, double moreNumber)
+    {
+        return number * moreNumber;
+    }
+
+    public double Sub(double number, double moreNumber)
+    {
+        return number - moreNumber;
+    }
+
+    public double Div(double number, double moreNumber)
+    {
+        return number / moreNumber;
+    }
+}
+
+public class Requester
+{
+    Calculator cal;
+    public Requester(Calculator cal)
+    {
+        this.cal = cal;
+    }
+
+    public void Request()
+    {
         bool check = true;
-        decimal quantityOperations = 1;
-
-        try//делаю проверку на ошибки при вводе данных
+        double result = 0;
+        while (check == true)
         {
-            Console.WriteLine("Введите число");
-            firstNumber = Convert.ToInt64(Console.ReadLine());
 
-            Console.WriteLine("Введите знак:");
-            switchCasesArifmeticOperations = Console.ReadLine();
-
+            Console.WriteLine("Введите первое число");
+            double number = Convert.ToInt64(Console.ReadLine());
+            Console.WriteLine("Выберите метод");
+            string method = Console.ReadLine();
             Console.WriteLine("Введите второе число");
-            secondNumber = Convert.ToInt64(Console.ReadLine());
-        }
+            double moreNumber = Convert.ToInt64(Console.ReadLine());
 
-        catch (Exception)
-        {
-            Console.WriteLine("ошибка");
-            Console.ReadLine();
-        }
-
-        switch (switchCasesArifmeticOperations)//далее создаю кейсы с арифметическими операциями
-        {
-            case "/":
-                if (secondNumber != 0)
-                {
-                    result = firstNumber / secondNumber;
-                }
-                else
-                {
-                    Console.WriteLine("ошибка");
-                }
-                break;
-
-            case "*":
-                result = firstNumber * secondNumber;
-                break;
-
-            case "+":
-                result = firstNumber + secondNumber;
-                break;
-
-            case "-":
-                result = firstNumber - secondNumber;
-                break;
-
-        }
-        newResult = result;
-        Console.WriteLine(result);
-
-        while (check == true)//создал цикл для возможности продолжать или нет работу над нашим результатом
-        {
-            quantityOperations++;
-            Console.Write("Продолжить?");
-            question = Console.ReadLine();
-            if (question == "Yes" || question == "yes") 
+            switch (method)
             {
+                case "+":
+                    result = cal.Sum(number, moreNumber);
+                    Console.WriteLine(result);
+                    break;
 
-                try //снова проверка на ввод числа
-                {
-                    Console.WriteLine("Введите знак");
-                    secondSwitchCasesArifmeticOperations = Console.ReadLine();
+                case "*":
+                    result = cal.Multiply(number, moreNumber);
+                    Console.WriteLine(result);
+                    break;
 
-                    Console.WriteLine("Введите  новое число");
-                    newNumber = Convert.ToInt64(Console.ReadLine());
-                }
-                catch (Exception)
-                {
-                    Console.WriteLine("ошибка");
-                }
+                case "-":
+                    result = cal.Sub(number, moreNumber);
+                    Console.WriteLine(result);
+                    break;
 
-                switch (secondSwitchCasesArifmeticOperations)//снова кейсы для арифметических операций с нашим прошлым result, для вычисления newResult
-                {
-                    case "/":
-                        if (newNumber != 0)
-                        {
-                            newResult = newResult / newNumber;
-                        }
-                        else
-                        {
-                            Console.WriteLine("ошибка");
-                        }
-                        break;
-
-                    case "*":
-                        newResult = newResult * newNumber;
-                        break;
-
-                    case "+":
-                        newResult = newResult + newNumber;
-                        break;
-
-                    case "-":
-                        newResult = newResult - newNumber;
-                        break;
-                }
-                Console.WriteLine(newResult);
-                check = true;
-
+                case "/":
+                    result = cal.Div(number, moreNumber);
+                    if (moreNumber != 0)
+                    {
+                        Console.WriteLine(result);
+                    }
+                    else
+                    {
+                        Console.WriteLine("на 0 делить нельзя");
+                    }
+                    break;
             }
+            number = result;
 
-            else if (question == "No" || question == "no")
+            Console.WriteLine("Продолжить?");
+            string question = Console.ReadLine();
+            if (question == "Yes") { }
+            else if (question == "No")
             {
-            Console.WriteLine("Покеда");
-                Console.ReadLine();
-                check = false;
-                quantityOperations += quantityOperations - quantityOperations - 1;
+                Console.WriteLine("Очистить калькулятор?");
+                string moreQuestion = Console.ReadLine();
+                if (moreQuestion == "Yes")
+                {
+                    Console.WriteLine("");
+                    Console.ReadKey();
+                    check = false;
+                }
             }
-
             else
             {
-                Console.WriteLine("Ошибка");
-                check = false;
-                Console.ReadLine();
-                quantityOperations += quantityOperations - quantityOperations - 1;
+                Console.WriteLine("Вы не ответили на вопрос");
             }
+
         }
-        Console.WriteLine("Количество выполненных операций: " + quantityOperations);
+
+    }
+}
+
+public class Program
+{
+    static void Main()
+    {
+        Calculator cal = new Calculator();
+        Requester simp = new Requester(cal);
+        simp.Request();
     }
 }
