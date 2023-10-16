@@ -13,12 +13,12 @@ public class Calculator
         return number * moreNumber;
     }
 
-    public double Sub(double number, double moreNumber)
+    public double Subtraction(double number, double moreNumber)
     {
         return number - moreNumber;
     }
 
-    public double Div(double number, double moreNumber)
+    public double Division(double number, double moreNumber)
     {
         return number / moreNumber;
     }
