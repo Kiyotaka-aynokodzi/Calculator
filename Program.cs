@@ -3,7 +3,7 @@ using System.Security.AccessControl;
 
 public class Calculator
 {
-    public double Sum(double number, double moreNumber)
+    public double Addition(double number, double moreNumber)
     {
         return number + moreNumber;
     }
