@@ -49,7 +49,7 @@ public class Requester
             switch (method)
             {
                 case "+":
-                    result = cal.Sum(number, moreNumber);
+                    result = cal.Addition(number, moreNumber);
                     Console.WriteLine(result);
                     break;
 
@@ -59,12 +59,12 @@ public class Requester
                     break;
 
                 case "-":
-                    result = cal.Sub(number, moreNumber);
+                    result = cal.Subtraction(number, moreNumber);
                     Console.WriteLine(result);
                     break;
 
                 case "/":
-                    result = cal.Div(number, moreNumber);
+                    result = cal.Division(number, moreNumber);
                     if (moreNumber != 0)
                     {
                         Console.WriteLine(result);
