@@ -26,10 +26,10 @@ public class Calculator
 
 public class Requester
 {
-    Calculator cal;
-    public Requester(Calculator cal)
+    Calculator calculator;
+    public Requester(Calculator calculator)
     {
-        this.cal = cal;
+        this.calculator = calculator;
     }
 
     public void Request()
@@ -49,22 +49,22 @@ public class Requester
 
             if (methods == "/")
             {
-                result = cal.Division(number, moreNumber);
+                result = calculator.Division(number, moreNumber);
                 Console.WriteLine(result);
             }
             else if (methods == "+")
             {
-                result = cal.Addition(number, moreNumber);
+                result = calculator.Addition(number, moreNumber);
                 Console.WriteLine(result);
             }
             else if (methods == "-")
             {
-                result = cal.Subtraction(number, moreNumber);
+                result = calculator.Subtraction(number, moreNumber);
                 Console.WriteLine(result);
             }
             else if (methods == "*")
             {
-                result = cal.Multiply(number, moreNumber);
+                result = calculator.Multiply(number, moreNumber);
                 Console.WriteLine(result);
             }
             number = result;
@@ -113,8 +113,8 @@ public class Program
         bool proverka = true;
         while (proverka == true)
         {
-            Calculator cal = new Calculator();
-            Requester Request = new Requester(cal);
+            Calculator calculator = new Calculator();
+            Requester Request = new Requester(calculator);
             Request.Request();
         }
     }
